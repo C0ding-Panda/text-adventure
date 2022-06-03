@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piraten-Spiel</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smooch&display=swap" rel="stylesheet">
+    </head>
+<body>
+<div class="schaedel_parent">
+    <img class="schaedel" src="./Bilder/skull.png">
+</div>
+    <a href="./tutorial.html" target="_blank">
+    <h1 class="welcome1">Wilkommen in Desgard</h1><!--Willkommens-Text-->
+    </a>
+    <div class="music" id="music_id"><!--Musik-->
+        <button class="einblend_button" id="einblend_button_id" onclick="musik_einblenden()"
+        ">Controls einblenden</button><!--Button zum einblenden-->
+        <audio controls="all" type="audio/mp3" loop src="./txt_adv_music_NEW2.mp3" id="audio_controls">
+            Musik wird nicht unterstützt
+        </audio>
+        <button class="ausblend_button" id="ausblend_button_id" onclick="musik_ausblenden()">Controls ausblenden</button><!--Buttom zum ausblenden-->
+    </div>
+    <div class="animation_pirat"><!--Pirat spritesheet-->
+    </div>
+    <div class="einfuerung" id="einfuerung_id">
+        Hallo, Reisender...
+        <br>
+        Wir schreiben das Jahr 1716 n.Chr. und nachdem du aus deiner alten Arbeit herausgeworfen wurdest, machst du dich auf die Suche nach einem Abenteuer.
+        Auf deiner Reise wirst du sowohl Menschen als auch ungeheuerlichen Kreaturen begegnen und dir deinen Weg zu den mysteriösen Perlen des Montagan suchen.
+        Viel Glück und viel Spaß.
+    </div><!--Einleitungstext-->
+    <div class="btns_con_oben">
+        <div class="btn_start_con">
+            <button class="start_btn" id="beginn_btn" onclick="start()">Beginnen</button>
+        </div>
+        <div class="btn_stop_con">
+            <button class="stop_btn" id="stop_btn" onclick="stop()">Abbrechen</button>
+        </div>
+    </div> <!--Anfangs-Buttons-->   
+    <div class="kapitel1" id="chapter1">
+        Langsam gehst du die vollen Straßen entlang und siehst dich um. Nach einiger Zeit siehst du den Hafen und erkennst in der Ferne ein Schild, auf dem geschrieben steht:"Boot zu verkaufen - nur 150 Sechel". Du hast noch 257 Sechel übrig, doch vorerst gehst du weiter. 
+        Du siehst für einen Moment nach links und erblickst dein Lieblingsrestaurant und überlegst, ob du zuerst etwas essen solltest.
+    </div><!--ertses Kapitel-->
+    <div class="btns_con_unten1" id="btns_con_unten1_id">
+        <div class="boot_kauf_con" id="boot_kauf_con_id">
+            <button class="boot_kauf_btn" id="boot_kauf_btn_id" onclick="bootkauf()">
+                Boot kaufen
+            </button>
+        </div>
+        <div class="essen_con" id="essen_con_id">
+            <button class="essen_btn" id="essen_btn_id" onclick="essengehen()">
+                Essen gehen
+            </button>
+        </div>
+    </div><!--Buttons für erstes Kapitel-->
+    <div class="kapitel_bootkauf" id="chapter_bootkauf">
+        Schnell gehst du zurück zum Bootsverkauf. Das kleine Schiff ist aud dunklem, robustem Holz gefertigt und du findest sofort gefallen an der Figur, die am Bug befestigt ist. "Kann ich dieses Boot hier kaufen?", fragst du die Verkäuferin, werlche in einer kleinen Holzhütte steht. "Das macht dann 150 Sechel", wird dir geantwortet. Schnell überreichst du das Geld und du wirst darüber informiert, dass bereits Essen und Trinken an Bord sei.
+        <br>
+        Begeistert tritts du durch die große Holztür. Sofort fällt dir die riesige Kiste unter einer der Bänken auf. Du öffnest sie mit einem herzhaften Ruck und findest darin eine vergilbte Karte und einen Kompass. "Guten Tag", hörst du auf einmal von hinten.
+        <br>
+        Du drehst dich um und siehst einen jüngeren Mann, etwa 27 Jahre alt, mit einer Muskete in der Tasche. Schnell fügt er an:"Mir liegt sehr viel an dieser Karte und ich würde sie ihnen sehr gerne abkaufen --- daür kann ich ihnen 50 Sechel geben." Du bist dir nicht sicher, ob du der Karte folgen, nicht folgen oder sie vielleicht sogar an den Mann verkaufen sollst.
+    </div><!--2test Kapitel-->
+    <div class="btns_con_unten2" id="btns_con_unten2_id">
+        <div class="karte_befolgen_con" id="karte_befolgen_con_id">
+            <button class="karte_befolgen_btn" id="karte_befolgen_btn_id" onclick="karte_folgen()">
+                Karte befolgen
+            </button>
+        </div>
+        <div class="karte_nicht_befolgen_con" id="karte_nicht_befolgen_con_id">
+            <button class="karte_nicht_befolgen_btn" id="karte_nicht_befolgen_btn_id" onclick="karte_nichtfolgen()">Karte nicht befolgen</button>
+        </div>
+        <div class="verkaufen_con" id="verkaufen_con_id">
+            <button class="verkaufen_btn" id="verkaufen_btn_id" onclick="verkaufen()">
+                Karte verkaufen
+            </button>
+        </div>
+    </div><!--Buttons von dem 2ten Kapitel-->
+    <div class="kapitel_essen" id="chapter_essen">
+        Mit großen Schritten läufst du zum Restaurant und öffnest die edle Mahagonitür, in der kunstvoll kleine Muscheln eingearbeitet wurden.
+        <br>
+        "Jo", begrüßt du deine beste Freundin. Du erzählst ihr von deinem Plan und dass du dir nicht sicher bist, ob du dir dein eigenes Boot kaufen sollst. Der Kellner kommt und es werden fish and chips verteilt. Hungrig stopfst du dir alles in den Mund und bestellst noch eine Portion. Nachdem du fertig gegessen hast, wird dir ein wenig übel und du gehst auf die Toilette. 
+        <br>
+        Dort musst du dich übergeben und du verspürts starke Krämpfe in deinem Bauch. Du liegst auf den schmutzigen Bodenkacheln und langsam tötet dich das Gift. In deinem letzten Augenaufschlag erkennst du vage eine dunkel bekleidete Gestalt, die dir deinen Geldbeutel aus der Tasche zieht und dann eilig wieder verschwindet.
+        <br>
+        <span class="tot_ch4" id="tot_ch4_id">Du bist gestorben! Das bedeutet, du kannst dieses Leben nicht mehr weiterspielen. Klicke auf "Abbrechen" um neu zu starten. Viel Glück beim nächsten Mal!</span>
+    </div><!--4tes Kapitel-->
+    <div class="sensenmann_con_ch4" id="sensenmann_con_ch4_id">
+        <img src="./Bilder/sensenmann.png" class="sensenmann_bild_ch4" id="sensenmann_bild_ch4_id">
+    </div><!--4tes Kapitel Todesnachricht-->
+    <div class="kapitel_karte_befolgen" id="chapter_karte_befolgen">
+        Du antwortest dem Fremden:"Ich würde die Karte leiber selber behalten". Enttäuscht schüttelt der Mann den Kopf und murmelt etwas wie:"Das hätte ich mir denken können..." Du schließt die Schiffstüren und bereitest alles vor. Danach gehst du ins Unterdeck und verwendest einen Kompass und die Karte, um herauszufinden wohin du fahren musst.
+        <br>
+        Danach hisst du die Segel und startest dein Schiff. Da der Wind gut steht, musst du nur eine Nacht auf dem Boot schlafen und am nächsten Morgen ist die Insel bereits in Sicht. Du bist so begeistert, dass du, nachdem du den Anker gelichtet hast einfach in das kristallklare Wasser springst und zum Strand schwimmst. Du siehst noch einmal auf deine Karte und dir fällt auf, dass du, um das Kreuz zu erreichen durch einen düsteren und nicht gerade ungefährlich aussehenden Wald laufen müsstest. Du könntest aber auch einen Umweg gehen und die Berge rechts von dir überqueren. Wofür entscheidest du dich?
+    </div><!--5tes Kapitel-->
+    <div class="btns_con_unten4" id="btns_con_unten4_id">
+        <div class="wald_con" id="wald_con_id">
+            <button class="wald_btn" id="wald_btn_id" onclick="wald_gehen()">Gehe zu dem Wald</button>
+        </div>
+        <div class="berge_con" id="berge_con_id">
+            <button class="berge_btn" id="berge_btn_id" onclick="berge_gehen()">Gehe zu den Bergen</button>
+        </div>
+    </div><!--5tes Kapitel Buttons-->
+
+    <div class="kapitel_karte_nichtbefolgen" id="chapter_karte_nichtbefolgen">
+        Leicht verwundert antwortest du dem Mann:"Nein, danke. Ich will die Karte nicht verkaufen..." Verärgert verschwindet der Mann wieder. "Uff", dennkst du dir. Jedoch hast du das bereits nach wenigen Minuten vergessen, genauso wie die Karte. Du gehst nach oben und bereitest alles vor und startest sofort mit deinem Schiff. Du weißt zwar nicht wohin du fahren willst, aber du hoffst etwas Tolles zu erleben.
+        <br>
+        Nachdem du einige Zeit gefahren bist, siehst du in der Ferne eine kleine Insel am Horizont, direkt vor dem legendären Sonnenuntergang. Du fresut dich bereits, diese Insel zu erkunden und lichtest deinen Anker, damit du ruhig schlafen kannst. Du legst dich unten auf deine Matratze und schläfst schnell ein. 
+        <br>
+        Irgendwann in der Nacht wachst du auf einmal wegen einem lauten Geräusch auf und stehst schnell auf. "Hallo?", rufst du in die Nacht --- keine Antwort. Du siehst einen Schatten --- ein anderes Geräusch --- Schritte. Energisch läufst du in die Richtung des Schattens und legst deine Hand an deine Muskete. Ein lautes Geräusch --- du liegst auf dem Boden --- erschossen. Der Mann von vorhin beugt sich über dich und zieht dir deine Karte aus der Tasche.
+        <br>
+        <span class="tot_ch6" id="tot_ch6_id">Du bist gestorben! Das bedeutet, du kannst dieses Leben nicht mehr weiterspielen. Klicke auf "Abbrechen" um neu zu starten. Viel Glück beim nächsten Mal!</span>
+    </div><!--6tes Kapitel-->
+    <div class="sensenmann_con_ch6" id="sensenmann_con_ch6_id">
+        <img src="./Bilder/sensenmann.png" class="sensenmann_bild_ch6" id="sensenmann_bild_ch6_id">
+    </div><!--6tes Kapitel Todesnachricht-->
+    <div class="kapitel_karte_verkaufen" id="chapter_karte_verkaufen">
+        Du hältst kurz inne und entscheidest dich dann, die Karte zu verkaufen. "Okay, ich gebe ihnen die Karte", antwortest du dem Fremden. Die Karte wird überreicht und im Gegenzug bekommst du, wie versprochen 50 Sechel. Du freust dich über das vermeintlich gute Geschäft, doch du wirst deine Entscheidung bald nicht mehr gutheißen können. Noch fröhlich läufts du nach oben und hisst schonmal die Segel und bereitest alles vor. Du bist begeistert, einfach losfahren zu können und die Freiheit geniessen zu können.
+        <br>
+        Langsam geht die Sonne unter und befor du einschläfst beobachtest du die glutrote Kugel dabei, ins Meer einzutauchen --- Plötzlich wachst du auf. Du hast ein lautes Geräusch gehört und als du aus dem Bett aufstehst, wackelt alles und deine Füße werden nass. Ein Sturm ist aufgekreuzt! So schnell du kannst schreitest du die Treppen zum Oberdeck hienauf und versuchst den Schiff unter Kontrolle zu bekommen, doch du scheiterst kläglich. Immer mehr Felsen kommen in deinen Weg und der Kompass spinnt auch. Dann schlägt dein Schiff an einem Feslen auf und wegen der Wucht wirst du weggeschleudert und landest mit deinem Schädel auf einem spitzen Felsen. 
+        <br>
+        Nach kurzer Zeit hat sich dein Blut im Meer verteilt und ein Schiff ist gesunken 
+        <br>
+        --- 
+        <br>
+        niemand wird jemals ahnen, dass hier einmal eine Person gestorben ist...       
+        <br>
+        <span class="tot_ch7" id="tot_ch7_id">Du bist gestorben! Das bedeutet, du kannst dieses Leben nicht mehr weiterspielen. Klicke auf "Abbrechen" um neu zu starten. Viel Glück beim nächsten Mal!</span>
+    </div><!--7tes Kapitel-->
+    <div class="sensenmann_con_ch7" id="sensenmann_con_ch7_id">
+        <img src="./Bilder/sensenmann.png" class="sensenmann_bild_ch7" id="sensenmann_bild_ch7_id">
+    </div><!--7tes Kapitel Todesnachricht-->
+    <div class="kapitel_wald" id="chapter_wald">
+        Du willst lieber den schnellen Weg nehmen, da er auch so auf der Karte eingezeichnet ist.
+        Langsam, mit bedächtgen Schritten näherst du dich dem Wald und wenige Momente später überquerst du die Grenze von Sand auf feuchte, von Moos überzogene Erde. Nach wenigen Schritten kannst du schon das Meer nicht mehr hören, dafür aber Vogel, die du so noch nie zuvor gehört- und gesehen hast --- ein Knacken im Unterholz... 
+        <br>
+        Blitzschnell drehst du dich einmal um dich selbst, doch da ist nichts. Etwas nervös gehst du weiter, doch deine Angst verfliegt schnell wieder. Du läufst nun schon etwa eine halbe Stunde durch den immer dunkler werdenden Wald und setzt dich kurz auf das weiche Moos um wieder zu Kräften zu kommen, als du ein Brummen wahrnimmst. Das Geräusch kommt von links von dir und wird tiefer und lauter. Auf einen Schlag hin ist wieder Stille. Du bist zwar verwundert, doch du dennkst dir nichts dabei. 
+        <br>
+        Ein wenig bleibst du noch sitzen, dann wilst du wieder weitergehen. Gerade als du aufstehen wolltest, spürst du einen extremen Druck auf deinem Rücken und fällst auf die nasse Erde. Du versuchst dich zu bewegen, doch dein ganzer Körper ist noch von dem harten Aufprall gelähmt. Nachdem das Adrenalin etwas verflogen ist, spürst du, wie dir massenhaft Blut aus deinem Rücken fließt. Dann wieder das Brummen --- ein Biss --- du siehst nichts mehr und weißt nur, dass es keinen Auseweg mehr gibt. 
+        <br>
+        <span class="tot_ch8" id="tot_ch8_id">Du bist gestorben! Das bedeutet, du kannst dieses Leben nicht mehr weiterspielen. Klicke auf "Abbrechen" um neu zu starten. Viel Glück beim nächsten Mal!</span>
+    </div><!--8tes Kapitel-->
+    <div class="sensenmann_con_ch8" id="sensenmann_con_ch8_id">
+        <img src="./Bilder/sensenmann.png" class="sensenmann_bild_ch8" id="sensenmann_bild_ch8_id">
+    </div><!--8tes Kapitel Todesnachricht-->
+
+    <div class="kapitel_berge" id="chapter_berge">
+        Du entscheidest dich lieber für den sicherer scheinenden Weg und beginnst, den steilen Berghang aufzusteigen. Nach wenigen Schritten merkst du, dass du bereits leicht aus der Puste bist, doch du machst weiter. Einige Zeit später hast du einen schönen Platz gefunden und setzt dich auf einen Baumstamm. Von oben überblickst du beinahe die gesamte Insel, nur der Wald erstreckt sich noch lange gen Osten. 
+        <br>
+        Nachdem du mit deiner Pause fertig bist, läufst du weiter, doch als du gerade an einem Strauch mit süßen Beeren vorbeigekommen bist, erkennst du leicht in den Boden getrampelte Pfade. Du weißt zwar nicht, ob sie von Tieren oder Menschen stammen, jedoch willst du das auch nicht wirklich herausfinden. Noch wenige Schritte und du bist auf der anderen Seite des Berges. 
+        <br>
+        Nachdem du den schwierigen Teil hinter dir gelassen hast, kannst du entlich die gegenüberliegende Seite der Insel überblicken. Während du deinen Blick schweifen lässt, fällt dir plötzlich etwas auf. Etwa 400 Meter von dir entfernt erkennst du Rauch von einem Feuer aufsteigen --- ein eindeutiges Lebenszeichen! Überrascht und überlegend, ob du zu dem Feuer gehen solltest, fährst du mit deinem Blick genauer über die Insel und siehst nun deutlich und etwa einen Kilometer östlich von dir eine Reihe von primitiven Hütten, welche aus Bambus und großen, gebogenen Blättern errichtet sind. 
+        <br>
+        Du könntest, wenn du die Anweisungen der Karte befolgen willst, beide Orte umgehen, doch ist es das, was du tun willst?
+    </div><!--9tes Kapitel-->
+    <div class="btns_con_unten9" id="btns_con_unten9_id">
+        <div class="lagerfeuer_con" id="lagerfeuer_con_id">
+            <button class="lagerfeuer_btn" id="lagerfeuer_btn_id" onclick="lagerfeuer_gehen()">Gehe zu dem Lagerfeuer</button>
+        </div>
+        <div class="hütten_con" id="hütten_con_id">
+            <button class="hütten_btn" id="hütten_btn_id" onclick="hütten_gehen()">Gehe zu den Hütten</button>
+        </div>
+        <div class="weiterkarte_con" id="weiterkarte_con_id">
+            <button class="weiterkarte_btn" id="weiterkarte_btn_id" onclick="weiterkarte_gehen()">Befolge die Karte</button>
+        </div>
+    </div><!--9tes Kapitel Buttons-->
+    <div class="kapitel_lagerfeuer" id="chapter_lagerfeuer">
+        Du entscheidest dich, zu dem Lagerfeuer zu gehen. Langsam läufts du über den grünen Boden und als du nach kurzer Zeit angekommen bist, rufst du:"Hallo?! Ist da jemand" Jetzt kannst du auch eine Art Schlafsack aus einem Fell erkennen und einige andere Dinge. Du siehst eine Frau auf dich zu gehen, sie sieht nicht gefährlich aus. "Hallo", sagt sie zu dir. Du antwortest ihr und erklärst kurz alles als auf einmal deine Karte von einer Böe erfasst und aus deiner Hand gerissen wurde. Du versuchst ihr hinterher zu rennen, doch die Aktion bleibt erfolgslos. Traurig gehst du zurück zu Alo, wie sich die Frau vorgestellt hat, doch sie kann dich beruhigen: "Auf dieser Insel gibt es keinen Schatz --- das sind nur Gerüchte"
+        <br>
+        Du entscheidest dich, bei Alo zu bleiben und ihr werdet gute Freunde. Sie erklärt dir, wie man in der Natur überlebt und du bleibst auf der Insel für den Rest deines Lebens.
+        <br>
+        <b>Ende</b>
+    </div><!--10tes Kapitel-->
+    <div class="kapitel_hütten" id="chapter_hütten">
+        Du willst zu den Hütten gehen, da du denkst, dass man dir dort vielleicht weiterhelfen kann. Also machst du dich auf den Weg und nach etwa 10 Minuten bist du den Hütten sehr nahe gekommen. Du kannst einen kleinen Stall, einen Platz und eine Art Markt erkennen, doch du hörst und siehst keinen einzigen Menschen.
+        <br>
+        Dir ist etwas unwohl, doch du gehst weiter in das Dorf und erkundest es ein wenig. Auf einmal hörst du ein Rascheln. "Hallo?", rufst du --- keine Antwort. Du gehst weiter, doch jetzt fühlst du dich sehr unwohl --- noch ein Geräusch --- instinktiv startest du zu rennen, doch da trifft dich ein Pfeil aus einem Blasrohr direkt zwischen deine Schulterblätter. Du lebst noch, wurdest aber gelähmt. Die Inselbewohner bringen dich zu einer Grube und graben dich bis zu den Augen ein. Nach wenigen Minuten bist du erstickt.
+        <br>
+        <span class="tot_ch11" id="tot_ch11_id">Du bist gestorben! Das bedeutet, du kannst dieses Leben nicht mehr weiterspielen. Klicke auf "Abbrechen" um neu zu starten. Viel Glück beim nächsten Mal!</span>
+    </div><!--11tes Kapitel-->
+    <div class="sensenmann_con_ch8" id="sensenmann_con_ch11_id">
+        <img src="./Bilder/sensenmann.png" class="sensenmann_bild_ch11" id="sensenmann_bild_ch11_id">
+    </div><!--11tes Kapitel Todesnachricht-->
+    <div class="kapitel_weiterkarte" id="chapter_weiterkarte">
+        Du entscheidest dich, weiterhin der Karte zu folgen, da dir die beiden Orte nicht wircklich einladend vorkommen und so läufst du noch einige Stunden vor dich hin in Richtung des Schatzes. Langsam färbt sich der Himmel orange und du musst wieder an dein zu Hause denken. Du siehst noch einmal auf deine Karte und dir fällt plötzlich auf, dass der Schatz nur noch etwa 50 Meter entfernt sein muss.
+        <br>
+        Du beginnst die Erde an der Stelle abzutragen und nachdem du etwa einen Meter tief gebuddelt hast, stößt du auf eine harte Kante. Du gräbst weiter und ziehst leztendlich eine dunkle Kiste aus Fichtenholz aus dem Loch. Gespannt öffnest du sie und als du den Deckel anhebst, wirst du beinahe blind vor Glanz. Du hast die Perlen des Montagan gefunden! Neben den dutzenden Perlen, Gold- und Silbermünzen liegt ein vergilbter Brief:
+        <br>
+            <span class="brief" id="brief_id">
+                <i>
+                Wer diesen Brief liest, dem ist es gelungen, meinen sagenhaften Schatz zu finden; den ich, nachdem ich unrechtmäßig verhaftet worden war, hier versteckte. Ich hoffe du weißt etwas damit anzufangen. Bis zum nächsten Mal.
+                <br>
+                Montagan
+                </i>
+            </span> 
+        <br>
+        Du bist begesitert und bringst den Schatz zu deinem Schiff und fährst zurück in die Stadt. Das erste was du tust, ist ein Krankenhaus zu finanzieren. Mit dem restlichen Geld errichtest du dir ein schönes Leben und wirst ein:e Großaktionär:in und weltberühmt, als der:die Mann:Frau, der:die von einem:r Armen zu einem:r international angesehenen Kauffrau:mann wurde.
+        <br>
+        <b>Ende</b>
+    </div><!--12tes Kapitel-->
+    <footer>
+        <div class="made" id="made_id">
+            made with 
+            <span id="love">
+                &lt;3 
+            </span>
+            by coding_panda
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
