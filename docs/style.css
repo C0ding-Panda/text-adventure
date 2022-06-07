@@ -5,6 +5,38 @@ a{
     text-decoration: none;
 }
 /* hier enden globale regeln*/
+.oben_teil{
+    display: flexbox;
+    justify-content: space-around;
+    align-items: center;
+}
+.schaedel_parent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+}
+.schaedel{
+    display: flex;
+    justify-content: center;
+    max-width: 10%;
+    height: auto;
+}
+/*animation von dem sprite links oben*/
+.animation_pirat{
+    border: 4px solid red;
+    margin-top: auto;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    background: url(pirat-spritesheet.png);
+    animation: jump 0.5s steps(2) infinite;
+}
+@keyframes jump{
+    from{background-position-x: 0px;}
+    to{background-position-x: 132px;}
+}
 .welcome1{
     font-size: 500%;
     font-weight: 400;
@@ -75,36 +107,6 @@ a{
 .ausblend_button:hover{
     font-size: 110%;
     cursor: pointer;
-}
-.schaedel_parent{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5%;
-}
-.schaedel{
-    display: flex;
-    justify-content: center;
-    max-width: 8%;
-    height: auto;
-}
-/*animation von dem sprite links oben*/
-.animation_pirat{
-    border: 4px solid red;
-    margin-top: auto;
-    width: 64px;
-    height: 64px;
-    display: flex;
-    position: absolute;
-    top: 10%;
-    left: 5%;
-    transform: translate(-5%, -10%);
-    background: url(pirat-spritesheet.png);
-    animation: jump 0.5s steps(2) infinite;
-}
-@keyframes jump{
-    from{background-position-x: 0px;}
-    to{background-position-x: 132px;}
 }
 .einfuerung{
     font-size: 150%;
@@ -564,7 +566,6 @@ a{
     color:rgb(235, 117, 117);
 }
 #github_link_id{
-    margin-left: 0.5%;
     color: rgb(235, 117, 117);
     transition-property: all;
     transition-duration: 0.3s;
