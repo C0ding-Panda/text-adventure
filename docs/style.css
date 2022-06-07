@@ -19,7 +19,7 @@ a{
 .schaedel{
     display: flex;
     justify-content: center;
-    max-width: 10%;
+    max-width: 15vh;
     height: auto;
 }
 /*animation von dem sprite links oben*/
@@ -557,12 +557,11 @@ a{
 #footer_id{
     display: flex;
     justify-content: center;
-    font-size: 120%;
+    font-size: 2.5vh;
     margin-top: 3%;
+    min-width: 10%;
 }
 #love{
-    margin-right: 1%;
-    margin-left: 1%;
     color:rgb(235, 117, 117);
 }
 #github_link_id{
