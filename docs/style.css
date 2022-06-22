@@ -173,6 +173,14 @@ a{
 #chapter1{
     display: none;
 }
+#restaurant_bild{
+    border-style: solid;
+    border-color: black;
+    border-width: 10px;
+    border-radius: 50px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
 /*hier endet erstes Kapitel*/
 .btns_con_unten1{
     display: none;
@@ -224,7 +232,9 @@ a{
 
 }
 #boot_bild{
-    border-style: hidden;
+    border-style: solid;
+    border-color: black;
+    border-width: 10px;
     border-radius: 50px;
     margin-top: 2%;
     margin-bottom: 2%;
