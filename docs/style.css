@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "Smooch";
+    src: url("./Smooch-Regular.ttf")
+}
 body{
     background-color: grey;
 }
@@ -38,19 +42,19 @@ a{
     to{background-position-x: 132px;}
 }
 .welcome1{
-    font-size: 500%;
+    font-size: 10vh;
     font-weight: 400;
     color: red;
     margin: 5%;
-    font-family: 'Smooch', cursive;
+    font-family: Smooch;
     display: flex;
     justify-content: center;
     transition-property: all;
-    transition-duration: 0.2s;
+    transition-duration: 0.7s;
     transition-timing-function:ease-in;
 }
 .welcome1:hover{
-    font-size: 600%;
+    font-size: 13vh;
     font-weight: 700;
     text-shadow: 0px 0px  50px red;
     cursor: pointer;
@@ -113,7 +117,7 @@ a{
     font-weight: 400;
     padding-right: 0%;
     padding-left: 0%;
-    font-family: 'Smooch', cursive;
+    font-family: Smooch;
     text-align: center;
 }
 #einfuerung_id{
@@ -173,6 +177,7 @@ a{
 #chapter1{
     display: none;
 }
+/*hier endet erstes Kapitel*/
 #restaurant_bild{
     border-style: solid;
     border-color: black;
@@ -180,8 +185,10 @@ a{
     border-radius: 50px;
     margin-top: 2%;
     margin-bottom: 2%;
+    height: 50vh;
+    width: auto;
 }
-/*hier endet erstes Kapitel*/
+/*restaurant-bild*/
 .btns_con_unten1{
     display: none;
     justify-content: center;
@@ -231,6 +238,7 @@ a{
     display: none;
 
 }
+/*nächstes Kapitel*/
 #boot_bild{
     border-style: solid;
     border-color: black;
@@ -238,8 +246,10 @@ a{
     border-radius: 50px;
     margin-top: 2%;
     margin-bottom: 2%;
+    height: 50vh;
+    width: auto;
 }
-/*nächstes Kapitel*/
+/*boot-bild*/
 #btns_con_unten2_id{
     display: none;
     align-items: center;
@@ -310,6 +320,17 @@ a{
     display: none;
 }
 /*neues Kapitel*/
+#bottle_bild{
+    border-style: solid;
+    border-color: black;
+    border-width: 10px;
+    border-radius: 50px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 50vh;
+    width: auto;
+}
+/*flasche-bild*/
 #tot_ch4_id{
     font-weight: 600;
 }
@@ -331,6 +352,17 @@ a{
     display: none;
 }
 /*nächstes Kapitel*/
+#karte_bild{
+    border-style: solid;
+    border-color: black;
+    border-width: 10px;
+    border-radius: 50px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 50vh;
+    width: auto;
+}
+/*karten bild*/
 #btns_con_unten4_id{
     display: none;
     align-items: center;
