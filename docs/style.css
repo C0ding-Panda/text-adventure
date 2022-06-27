@@ -413,6 +413,17 @@ a{
     display: none;
 }
 /*neues Kapitel*/
+#schusswaffe_bild{
+    border-style: solid;
+    border-color: black;
+    border-width: 10px;
+    border-radius: 50px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 50vh;
+    width: auto;
+}
+/*bild von der Schusswaffe*/
 #tot_ch6_id{
     font-weight: 600;
 }
