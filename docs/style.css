@@ -477,6 +477,17 @@ a{
     margin: auto;
 }
 /*neues Kapitel*/
+#wald_bild{
+    border-style: solid;
+    border-color: black;
+    border-width: 10px;
+    border-radius: 50px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 50vh;
+    width: auto;
+}
+/*wald bild*/
 #tot_ch8_id{
     font-weight: 600;
 }
