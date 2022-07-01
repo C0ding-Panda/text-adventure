@@ -509,6 +509,17 @@ a{
     display: none;
 }
 /*nächstes Kapitel*/
+#berge_bild{
+    border-style: solid;
+    border-color: black;
+    border-width: 10px;
+    border-radius: 50px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 50vh;
+    width: auto;
+}
+/*berge bild*/
 #btns_con_unten9_id{
     display: none;
     align-items: center;
