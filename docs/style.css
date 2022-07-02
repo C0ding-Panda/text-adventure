@@ -589,12 +589,34 @@ a{
     display: none;
 }
 /*erstes Ende*/
+#lager_bild{
+    border-style: solid;
+    border-color: black;
+    border-width: 10px;
+    border-radius: 50px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 50vh;
+    width: auto;
+}
+/*lager bild*/
 #chapter_hütten{
     display: none;
     font-size: 130%;
     margin: auto;
 }
 /*neues Kapitel*/
+#pfeil_bild{
+    border-style: solid;
+    border-color: black;
+    border-width: 10px;
+    border-radius: 50px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 50vh;
+    width: auto;
+}
+/*pfeil bild*/
 #tot_ch11_id{
     font-weight: 600;
 }
@@ -614,6 +636,17 @@ a{
     font-size: 130%;
     margin: auto;
 }/*letztes Kapitel(vorerst)*/
+#schatz_bild{
+    border-style: solid;
+    border-color: black;
+    border-width: 10px;
+    border-radius: 50px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 50vh;
+    width: auto;
+}
+/*schatz bild*/
 #brief_id{
     font-family: 'Smooch';
     font-weight: 400;

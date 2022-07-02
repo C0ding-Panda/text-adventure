@@ -85,26 +85,31 @@ function wald_gehen() {
     document.getElementById("btns_con_unten4_id").style.display = "none";
     document.getElementById("chapter_wald").style.display = "block";
     document.getElementById("sensenmann_con_ch8_id").style.display = "flex";
+    window.scrollBy({ top: -500, left: 0, behavior: "smooth" });//nach oben scrollen
 }//wenn man den Wald betreten will
 function berge_gehen() {
     document.getElementById("chapter_karte_befolgen").style.display = "none";
     document.getElementById("btns_con_unten4_id").style.display = "none";
     document.getElementById("chapter_berge").style.display = "block";
     document.getElementById("btns_con_unten9_id").style.display = "flex";
+    window.scrollBy({ top: -530, left: 0, behavior: "smooth" });//nach oben scrollen
 }//wenn man die Berge betreten will
 function lagerfeuer_gehen() {
     document.getElementById("chapter_berge").style.display = "none";
     document.getElementById("btns_con_unten9_id").style.display = "none";
     document.getElementById("chapter_lagerfeuer").style.display = "block";
+    window.scrollBy({ top: -370, left: 0, behavior: "smooth" });//nach oben scrollen
 }//Lagerfeuer endung
 function hütten_gehen() {
     document.getElementById("chapter_berge").style.display = "none";
     document.getElementById("btns_con_unten9_id").style.display = "none";
     document.getElementById("chapter_hütten").style.display = "block";
     document.getElementById("sensenmann_con_ch11_id").style.display = "flex";
+    window.scrollBy({ top: -700, left: 0,});//nach oben scrollen
 }
 function weiterkarte_gehen() {
     document.getElementById("chapter_berge").style.display = "none";
     document.getElementById("btns_con_unten9_id").style.display = "none";
     document.getElementById("chapter_weiterkarte").style.display = "block";
+    window.scrollBy({ top: -500, left: 0, behavior: "smooth" });//nach oben scrollen
 }
